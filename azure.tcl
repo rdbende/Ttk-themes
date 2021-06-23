@@ -20,9 +20,9 @@ namespace eval ttk::theme::azure {
 
     proc LoadImages {imgdir} {
         variable I
-        foreach file [glob -directory $imgdir *.gif] {
+        foreach file [glob -directory $imgdir *.png] {
             set img [file tail [file rootname $file]]
-            set I($img) [image create photo -file $file -format gif]
+            set I($img) [image create photo -file $file -format png]
         }
     }
 
